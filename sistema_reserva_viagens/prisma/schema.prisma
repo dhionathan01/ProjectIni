@@ -9,3 +9,34 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Viagem{
+  id String @id @default(uuid())
+  nome String
+  localizacao String
+  dataInicio DateTime
+  dataFim DateTime
+  precoPorDia Decimal @db.Decimal(11,2)
+  descricao String
+  fotoCapa String
+  imagensUrl String[]
+  destaques String[]
+  maximoHospedes Int
+  reservas reservaViagem[]
+}
+
+model reservaViagem{
+  id String @id @default(uuid())
+  reservaId String
+  viagem Viagem @relation(fields: [reservaId], references: [id])
+  userId String 
+  user User @relation(fields: [userId], references: [id])
+  dataInicio DateTime
+  dataFim DateTime
+  precoTotal Decimal @db.Decimal(11,2)
+}
+
+model User {
+  id String @id @default(uuid())
+  reserva reservaViagem[]
+}
