@@ -18,3 +18,10 @@ yarn add -D prisma
 ```
 npx prisma init --datasource-provider postgresql
 ```
+* Adicionando prettier
+```
+yarn add -d prettier
+```
+* Fazendo a Migration no banco:
+```
+npx prisma migrate dev --name init
