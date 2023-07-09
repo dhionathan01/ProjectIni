@@ -7,3 +7,8 @@
 
 As requisições a API com o fetch por padrão só é executada uma vez, as vezes seguintes é capturada pelo cache como podemos ver no print abaixo:
 ![Alt text](image-1.png)
+
+Com o obj next eo atributo revalidate podemos sentar um intervalo de segundos para refazer a requisção e atualizar os dados em cache (No exemplo 10segundos):
+![Requisição 10s](image-2.png)
+Ou obrigar sempre que a requisição for feita ignorar o cache e pegar os dados novamente:
+![Alt text](image-3.png)
