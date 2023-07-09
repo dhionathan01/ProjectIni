@@ -25,3 +25,9 @@ yarn add -d prettier
 * Fazendo a Migration no banco:
 ```
 npx prisma migrate dev --name init
+```
+
+Erro ao encontrar o prismaclient execute
+```
+yarn add @prisma/client
+```
