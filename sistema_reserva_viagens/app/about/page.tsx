@@ -9,7 +9,7 @@ const Page = () => {
 
         <div>
             <Viagens/>
-            Hello World12312!
+            Hello World!
         </div>
     );
 }

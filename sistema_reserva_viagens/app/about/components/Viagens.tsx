@@ -6,10 +6,16 @@ const getViagens = async () => {
     return viagens;
 };
 
-const  Viagens = async () => {
-    const data = await getViagens();
+const Viagens = async () => {
+    const data = await fetch("http:jsonplaceholder.typicode.com/posts").then((res) => res.json());
     console.log({ data });
-    return ( <div>Viagem</div> );
-}
+    return (
+        <div>
+            {data.map((i: any) => (
+                <p key={i.id}>{ i.title}</p>
+            ))}
+        </div>
+    );
+};
  
 export default Viagens;
