@@ -8,7 +8,13 @@ npx create-next-app --use-yarn sistema_reserva_viagens
 
 * Instalando Prisma como dev dependencia
 OBS: Navegar até a pasta do projeto: cd sistema ```cd sistema_reserva_viagens```
+
 Instalando Prisma:
 ```
 yarn add -D prisma
+```
+
+* Inicializando o prisma como postgre (datasource)
+```
+npx prisma init --datasource-provider postgresql
 ```
