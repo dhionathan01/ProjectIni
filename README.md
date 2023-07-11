@@ -31,3 +31,12 @@ Erro ao encontrar o prismaclient execute
 ```
 yarn add @prisma/client
 ```
+Instalando next-auth
+```
+yarn add next-auth 
+```
+Instalando dependencia que adapta o next auth ao prisma:
+```
+yarn add @auth/prisma-adapter
+```
+

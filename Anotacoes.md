@@ -12,3 +12,5 @@ Com o obj next eo atributo revalidate podemos sentar um intervalo de segundos pa
 ![Requisição 10s](image-2.png)
 Ou obrigar sempre que a requisição for feita ignorar o cache e pegar os dados novamente:
 ![Alt text](image-3.png)
+
+* Criando no schema as tabelas necessárias para o funcionamento do next Auth
