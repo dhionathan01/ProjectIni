@@ -5,7 +5,7 @@ const Layout = ({ children }: {
 }) => {
     return (
         <div>
-            <h2>Sempre será exibido dentro da rota about</h2>
+            <h2></h2>
             {children}
         </div>
     )

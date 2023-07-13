@@ -13,6 +13,7 @@ export const authOptions: AuthOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
+  
 };
 
 const handler = NextAuth(authOptions);
