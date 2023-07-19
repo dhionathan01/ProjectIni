@@ -39,4 +39,7 @@ Instalando dependencia que adapta o next auth ao prisma:
 ```
 yarn add @auth/prisma-adapter
 ```
-
+Instalando icones react:
+```
+ yarn add react-icon
+```
