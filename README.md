@@ -41,5 +41,5 @@ yarn add @auth/prisma-adapter
 ```
 Instalando icones react:
 ```
- yarn add react-icon
+ yarn add react-icons
 ```

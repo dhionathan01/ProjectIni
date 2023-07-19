@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { AiOutlineMenu } from 'react-icons/ai';
 
 const Header = () => {
     const { status } = useSession();
@@ -14,7 +15,9 @@ const Header = () => {
                 <button className="text-primaria text-sm font-semibold" onClick={logarComClick}> Login </button>
             )}
             {status == "authenticated" && (
-                <button className="text-primaria text-sm font-semibold" onClick={deslogarComClick}> Logout </button>
+                <div className="flex items-center">
+                    <AiOutlineMenu size= { 16} />
+               </div>
             )}
         </div>
     );
