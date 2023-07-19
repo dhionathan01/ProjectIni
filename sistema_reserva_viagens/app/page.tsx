@@ -2,7 +2,6 @@
 export default function Home() {
   return (
     <div className='bg-primaria'>
-      Hello World
     </div>
   )
 }

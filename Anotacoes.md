@@ -14,3 +14,6 @@ Ou obrigar sempre que a requisição for feita ignorar o cache e pegar os dados 
 ![Alt text](image-3.png)
 
 * Criando no schema as tabelas necessárias para o funcionamento do next Auth
+
+* Fazendo Header:
+![Alt text](image-4.png)
