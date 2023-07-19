@@ -5,7 +5,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { AiOutlineMenu } from 'react-icons/ai';
 
 const Header = () => {
-    const { status } = useSession();
+    const { status, data } = useSession();
     const logarComClick = () => signIn();
     const deslogarComClick = () => signOut();
     return (
@@ -14,9 +14,11 @@ const Header = () => {
             {status == "unauthenticated" && (
                 <button className="text-primaria text-sm font-semibold" onClick={logarComClick}> Login </button>
             )}
-            {status == "authenticated" && (
+            {status == "authenticated" && data.user && (
                 <div className="flex items-center">
-                    <AiOutlineMenu size= { 16} />
+                    <AiOutlineMenu size={16} />
+
+                    <Image height={24} width={24} src={data.user.image!} alt={ data.user.name!} />
                </div>
             )}
         </div>
