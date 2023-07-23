@@ -1,7 +1,9 @@
 "use client";
+import PesquisaReserva from "./components/PesquisaReserva";
 export default function Home() {
   return (
-    <div className='bg-primaria'>
+    <div>
+      <PesquisaReserva/>
     </div>
-  )
+  );
 }
