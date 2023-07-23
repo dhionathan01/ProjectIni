@@ -57,3 +57,8 @@ Para fazer com que o typescript reconheça o datepicker é preciso instalar o ty
 ```
  yarn add -D @types/react-datepicker
 ```
+
+Instalando currency input para tratar campos com real
+```
+yarn add react-currency-input-field
+```
