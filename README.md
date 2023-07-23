@@ -43,3 +43,8 @@ Instalando icones react:
 ```
  yarn add react-icons
 ```
+
+Instalando tailwind merge
+```
+yarn add tailwind-merge
+```
