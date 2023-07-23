@@ -17,6 +17,8 @@ module.exports = {
         secundaria: '#312A4F',
         primariaClara: '#DDD5EA',
         primariaEscura: '#312A4F',
+        cinzaPrimario: '#717171',
+        cinzaClaro: '#BBBFBF'
       },
       textColor: {
         dark: '#717171',
