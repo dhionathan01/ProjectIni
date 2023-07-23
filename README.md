@@ -48,3 +48,12 @@ Instalando tailwind merge
 ```
 yarn add tailwind-merge
 ```
+
+Instalando datePicker e Date fns:
+```
+yarn add react-datepicker date-fns
+```
+Para fazer com que o typescript reconheça o datepicker é preciso instalar o type: 
+```
+ yarn add -D @types/react-datepicker
+```
