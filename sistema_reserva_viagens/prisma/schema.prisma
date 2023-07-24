@@ -10,45 +10,47 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Viagem{
-  id String @id @default(uuid())
-  nome String
-  localizacao String
-  dataInicio DateTime
-  dataFim DateTime
-  precoPorDia Decimal @db.Decimal(11,2)
-  descricao String
-  fotoCapa String
-  imagensUrl String[]
-  destaques String[]
+model Viagem {
+  id             String          @id @default(uuid())
+  nome           String
+  localizacao    String
+  dataInicio     DateTime
+  dataFim        DateTime
+  precoPorDia    Decimal         @db.Decimal(11, 2)
+  descricao      String
+  fotoCapa       String
+  imagensUrl     String[]
+  destaques      String[]
   maximoHospedes Int
-  reservas reservaViagem[]
+  reservas       reservaViagem[]
+  countryCode     String
+  recommended    Boolean         @default(false)
 }
 
-model reservaViagem{
-  id String @id @default(uuid())
-  reservaId String
-  viagem Viagem @relation(fields: [reservaId], references: [id])
-  userId String 
-  user User @relation(fields: [userId], references: [id])
+model reservaViagem {
+  id         String   @id @default(uuid())
+  reservaId  String
+  viagem     Viagem   @relation(fields: [reservaId], references: [id])
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
   dataInicio DateTime
-  dataFim DateTime
-  precoTotal Decimal @db.Decimal(11,2)
+  dataFim    DateTime
+  precoTotal Decimal  @db.Decimal(11, 2)
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String
-  type               String
-  provider           String
-  providerAccountId  String
-  refresh_token      String?  @db.Text
-  access_token       String?  @db.Text
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String?  @db.Text
-  session_state      String?
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -64,14 +66,14 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String          @id @default(cuid())
   name          String?
-  email         String?   @unique
+  email         String?         @unique
   emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
-  reservas reservaViagem[]
+  reservas      reservaViagem[]
 }
 
 model VerificationToken {

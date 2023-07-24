@@ -62,3 +62,12 @@ Instalando currency input para tratar campos com real
 ```
 yarn add react-currency-input-field
 ```
+Alteração no banco de dados:
+Formater o doc do prisma com o comando
+```
+npx prisma format
+```
+Rodando a migration
+```
+npx prisma migrate dev --name add_country_code_and_recomended
+```
