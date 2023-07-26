@@ -71,3 +71,7 @@ Rodando a migration
 ```
 npx prisma migrate dev --name add_country_code_and_recomended
 ```
+adicionando bandeira de paises com react country flag:
+```
+yarn add react-country-flag
+```
